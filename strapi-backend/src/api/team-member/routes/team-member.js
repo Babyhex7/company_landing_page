@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * team-member router
@@ -6,6 +6,6 @@
  * GET /api/team-members - ambil semua team members
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::team-member.team-member');
+module.exports = createCoreRouter("api::team-member.team-member");

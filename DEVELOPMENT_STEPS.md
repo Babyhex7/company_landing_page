@@ -27,6 +27,7 @@ Week 2: Integration & Polish
 ## 🗓️ DAY 1 (Feb 1, 2026) - Strapi Backend Setup
 
 ### ✅ Checklist Hari Ini:
+
 - [ ] Install Strapi
 - [ ] Configure database
 - [ ] Create all content types
@@ -49,6 +50,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ```
 
 **Output yang diharapkan:**
+
 - Folder `strapi-backend` terbuat
 - Strapi admin panel terbuka di browser
 - Diminta create admin user
@@ -83,17 +85,18 @@ npm install pg
 ```
 
 Edit `config/database.js`:
+
 ```javascript
 module.exports = ({ env }) => ({
   connection: {
-    client: 'postgres',
+    client: "postgres",
     connection: {
-      host: env('DATABASE_HOST', '127.0.0.1'),
-      port: env.int('DATABASE_PORT', 5432),
-      database: env('DATABASE_NAME', 'strapi'),
-      user: env('DATABASE_USERNAME', 'postgres'),
-      password: env('DATABASE_PASSWORD', 'password'),
-      ssl: env.bool('DATABASE_SSL', false),
+      host: env("DATABASE_HOST", "127.0.0.1"),
+      port: env.int("DATABASE_PORT", 5432),
+      database: env("DATABASE_NAME", "strapi"),
+      user: env("DATABASE_USERNAME", "postgres"),
+      password: env("DATABASE_PASSWORD", "password"),
+      ssl: env.bool("DATABASE_SSL", false),
     },
   },
 });
@@ -112,17 +115,17 @@ module.exports = ({ env }) => ({
 
 **Add Fields:**
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `title` | Text | Short text, Required |
-| `slug` | UID | Attached to: title, Required |
-| `description` | Text | Long text |
-| `content` | Rich text | Full, with images |
-| `icon` | Text | Short text |
-| `image` | Media | Single image |
-| `features` | JSON | - |
-| `order` | Number | Integer, Default: 0 |
-| `featured` | Boolean | Default: false |
+| Field Name    | Type      | Settings                     |
+| ------------- | --------- | ---------------------------- |
+| `title`       | Text      | Short text, Required         |
+| `slug`        | UID       | Attached to: title, Required |
+| `description` | Text      | Long text                    |
+| `content`     | Rich text | Full, with images            |
+| `icon`        | Text      | Short text                   |
+| `image`       | Media     | Single image                 |
+| `features`    | JSON      | -                            |
+| `order`       | Number    | Integer, Default: 0          |
+| `featured`    | Boolean   | Default: false               |
 
 **Klik "Save"** → Strapi akan restart
 
@@ -135,20 +138,20 @@ module.exports = ({ env }) => ({
 
 **Add Fields:**
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `title` | Text | Required |
-| `slug` | UID | Attached to: title, Required |
-| `description` | Text | Long text |
-| `content` | Rich text | Full |
-| `image` | Media | Single image, Required |
-| `gallery` | Media | Multiple images |
-| `category` | Text | Short text |
-| `client` | Text | Short text |
-| `website` | Text | Short text |
-| `technologies` | JSON | - |
-| `featured` | Boolean | Default: false |
-| `date` | Date | Type: date |
+| Field Name     | Type      | Settings                     |
+| -------------- | --------- | ---------------------------- |
+| `title`        | Text      | Required                     |
+| `slug`         | UID       | Attached to: title, Required |
+| `description`  | Text      | Long text                    |
+| `content`      | Rich text | Full                         |
+| `image`        | Media     | Single image, Required       |
+| `gallery`      | Media     | Multiple images              |
+| `category`     | Text      | Short text                   |
+| `client`       | Text      | Short text                   |
+| `website`      | Text      | Short text                   |
+| `technologies` | JSON      | -                            |
+| `featured`     | Boolean   | Default: false               |
+| `date`         | Date      | Type: date                   |
 
 **Save**
 
@@ -158,16 +161,16 @@ module.exports = ({ env }) => ({
 
 Display name: `Testimonial`
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `quote` | Text | Long text, Required |
-| `author_name` | Text | Required |
-| `author_position` | Text | - |
-| `author_company` | Text | - |
-| `author_image` | Media | Single image |
-| `rating` | Number | Integer, Min: 1, Max: 5 |
-| `featured` | Boolean | Default: false |
-| `order` | Number | Integer, Default: 0 |
+| Field Name        | Type    | Settings                |
+| ----------------- | ------- | ----------------------- |
+| `quote`           | Text    | Long text, Required     |
+| `author_name`     | Text    | Required                |
+| `author_position` | Text    | -                       |
+| `author_company`  | Text    | -                       |
+| `author_image`    | Media   | Single image            |
+| `rating`          | Number  | Integer, Min: 1, Max: 5 |
+| `featured`        | Boolean | Default: false          |
+| `order`           | Number  | Integer, Default: 0     |
 
 **Save**
 
@@ -177,15 +180,15 @@ Display name: `Testimonial`
 
 Display name: `Team Member`
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `name` | Text | Required |
-| `position` | Text | Required |
-| `bio` | Text | Long text |
-| `image` | Media | Single image, Required |
-| `social_links` | JSON | - |
-| `order` | Number | Integer, Default: 0 |
-| `featured` | Boolean | Default: false |
+| Field Name     | Type    | Settings               |
+| -------------- | ------- | ---------------------- |
+| `name`         | Text    | Required               |
+| `position`     | Text    | Required               |
+| `bio`          | Text    | Long text              |
+| `image`        | Media   | Single image, Required |
+| `social_links` | JSON    | -                      |
+| `order`        | Number  | Integer, Default: 0    |
+| `featured`     | Boolean | Default: false         |
 
 **Save**
 
@@ -195,17 +198,17 @@ Display name: `Team Member`
 
 Display name: `Blog Post`
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `title` | Text | Required |
-| `slug` | UID | Attached to: title, Required |
-| `excerpt` | Text | Long text |
-| `content` | Rich text | Full |
-| `cover_image` | Media | Single image, Required |
-| `category` | Text | Short text |
-| `published_at` | Date | Type: datetime |
-| `read_time` | Number | Integer (minutes) |
-| `tags` | JSON | - |
+| Field Name     | Type      | Settings                     |
+| -------------- | --------- | ---------------------------- |
+| `title`        | Text      | Required                     |
+| `slug`         | UID       | Attached to: title, Required |
+| `excerpt`      | Text      | Long text                    |
+| `content`      | Rich text | Full                         |
+| `cover_image`  | Media     | Single image, Required       |
+| `category`     | Text      | Short text                   |
+| `published_at` | Date      | Type: datetime               |
+| `read_time`    | Number    | Integer (minutes)            |
+| `tags`         | JSON      | -                            |
 
 **Save**
 
@@ -215,12 +218,12 @@ Display name: `Blog Post`
 
 Display name: `Client Logo`
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `name` | Text | Required |
-| `logo` | Media | Single image, Required |
-| `website` | Text | Short text |
-| `order` | Number | Integer, Default: 0 |
+| Field Name | Type   | Settings               |
+| ---------- | ------ | ---------------------- |
+| `name`     | Text   | Required               |
+| `logo`     | Media  | Single image, Required |
+| `website`  | Text   | Short text             |
+| `order`    | Number | Integer, Default: 0    |
 
 **Save**
 
@@ -235,20 +238,20 @@ Display name: `Client Logo`
 
 **Add Fields:**
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `hero_title` | Text | Required |
-| `hero_subtitle` | Text | Long text |
-| `hero_image` | Media | Single image |
-| `hero_cta_text` | Text | Default: "Get Started" |
-| `hero_cta_link` | Text | Default: "/contact" |
-| `services_title` | Text | Default: "What We Do" |
-| `services_subtitle` | Text | - |
-| `portfolio_title` | Text | Default: "Our Works" |
-| `testimonials_title` | Text | Default: "What Clients Say" |
-| `cta_title` | Text | Default: "Ready to Start?" |
-| `cta_subtitle` | Text | - |
-| `cta_button_text` | Text | Default: "Get Started" |
+| Field Name           | Type  | Settings                    |
+| -------------------- | ----- | --------------------------- |
+| `hero_title`         | Text  | Required                    |
+| `hero_subtitle`      | Text  | Long text                   |
+| `hero_image`         | Media | Single image                |
+| `hero_cta_text`      | Text  | Default: "Get Started"      |
+| `hero_cta_link`      | Text  | Default: "/contact"         |
+| `services_title`     | Text  | Default: "What We Do"       |
+| `services_subtitle`  | Text  | -                           |
+| `portfolio_title`    | Text  | Default: "Our Works"        |
+| `testimonials_title` | Text  | Default: "What Clients Say" |
+| `cta_title`          | Text  | Default: "Ready to Start?"  |
+| `cta_subtitle`       | Text  | -                           |
+| `cta_button_text`    | Text  | Default: "Get Started"      |
 
 **Save**
 
@@ -258,18 +261,18 @@ Display name: `Client Logo`
 
 Display name: `Site Setting`
 
-| Field Name | Type | Settings |
-|------------|------|----------|
-| `site_name` | Text | Required, Default: "Company Name" |
-| `tagline` | Text | - |
-| `logo` | Media | Single image |
-| `logo_dark` | Media | Single image |
-| `contact_email` | Email | - |
-| `contact_phone` | Text | - |
-| `contact_address` | Text | Long text |
-| `working_hours` | Text | - |
-| `social_links` | JSON | - |
-| `footer_text` | Text | - |
+| Field Name        | Type  | Settings                          |
+| ----------------- | ----- | --------------------------------- |
+| `site_name`       | Text  | Required, Default: "Company Name" |
+| `tagline`         | Text  | -                                 |
+| `logo`            | Media | Single image                      |
+| `logo_dark`       | Media | Single image                      |
+| `contact_email`   | Email | -                                 |
+| `contact_phone`   | Text  | -                                 |
+| `contact_address` | Text  | Long text                         |
+| `working_hours`   | Text  | -                                 |
+| `social_links`    | JSON  | -                                 |
+| `footer_text`     | Text  | -                                 |
 
 **Save**
 
@@ -285,6 +288,7 @@ Display name: `Site Setting`
 4. **Save**
 
 **Tested permissions:**
+
 - Service: find, findOne ✅
 - Project: find, findOne ✅
 - Testimonial: find, findOne ✅
@@ -305,7 +309,7 @@ Display name: `Site Setting`
 
 ```
 Hero Title:          We Build Digital Experiences That Matter
-Hero Subtitle:       Transform your ideas into reality with cutting-edge web solutions. 
+Hero Subtitle:       Transform your ideas into reality with cutting-edge web solutions.
                      We create modern, responsive, and performant applications.
 Hero CTA Text:       Get Started
 Hero CTA Link:       /contact
@@ -342,6 +346,7 @@ Footer Text:         © 2026 TechCorp Solutions. All rights reserved.
 ```
 
 **Social Links (JSON):**
+
 ```json
 {
   "facebook": "https://facebook.com/techcorp",
@@ -359,6 +364,7 @@ Footer Text:         © 2026 TechCorp Solutions. All rights reserved.
 #### 7.3 Add Sample Services (3 samples)
 
 **Service 1:**
+
 ```
 Title:        Web Development
 Description:  Custom web applications built with modern technologies
@@ -367,9 +373,11 @@ Features:     ["Responsive Design", "Fast Performance", "SEO Optimized"]
 Order:        1
 Featured:     ✅ true
 ```
+
 **Save** → **Publish**
 
 **Service 2:**
+
 ```
 Title:        Mobile Apps
 Description:  Native and cross-platform mobile applications
@@ -378,9 +386,11 @@ Features:     ["iOS & Android", "React Native", "Flutter"]
 Order:        2
 Featured:     ✅ true
 ```
+
 **Save** → **Publish**
 
 **Service 3:**
+
 ```
 Title:        UI/UX Design
 Description:  Beautiful and intuitive user interfaces
@@ -389,6 +399,7 @@ Features:     ["User Research", "Prototyping", "Design Systems"]
 Order:        3
 Featured:     ✅ true
 ```
+
 **Save** → **Publish**
 
 ---
@@ -396,6 +407,7 @@ Featured:     ✅ true
 #### 7.4 Add Sample Projects (2 samples)
 
 **Project 1:**
+
 ```
 Title:        E-commerce Platform
 Description:  Modern online shopping experience
@@ -406,9 +418,11 @@ Technologies: ["React", "Node.js", "MongoDB"]
 Featured:     ✅ true
 Date:         2026-01-15
 ```
+
 **Save** → **Publish**
 
 **Project 2:**
+
 ```
 Title:        Mobile Banking App
 Description:  Secure and fast banking on the go
@@ -418,6 +432,7 @@ Technologies: ["React Native", "Firebase", "Stripe"]
 Featured:     ✅ true
 Date:         2025-12-20
 ```
+
 **Save** → **Publish**
 
 ---
@@ -425,8 +440,9 @@ Date:         2025-12-20
 #### 7.5 Add Sample Testimonials (2 samples)
 
 **Testimonial 1:**
+
 ```
-Quote:              Working with TechCorp has been an absolute pleasure. They delivered 
+Quote:              Working with TechCorp has been an absolute pleasure. They delivered
                     beyond our expectations and the results speak for themselves.
 Author Name:        John Doe
 Author Position:    CEO
@@ -435,11 +451,13 @@ Rating:             5
 Featured:           ✅ true
 Order:              1
 ```
+
 **Save** → **Publish**
 
 **Testimonial 2:**
+
 ```
-Quote:              The team's expertise and dedication transformed our vision into reality. 
+Quote:              The team's expertise and dedication transformed our vision into reality.
                     Highly recommend their services!
 Author Name:        Jane Smith
 Author Position:    CTO
@@ -448,6 +466,7 @@ Rating:             5
 Featured:           ✅ true
 Order:              2
 ```
+
 **Save** → **Publish**
 
 ---
@@ -468,6 +487,7 @@ Buka browser atau Postman, test endpoints:
 ```
 
 **Expected Response:**
+
 ```json
 {
   "data": [...],
@@ -480,6 +500,7 @@ Buka browser atau Postman, test endpoints:
 ### ✅ DAY 1 COMPLETED!
 
 **What we built:**
+
 - ✅ Strapi backend running
 - ✅ 6 collection types created
 - ✅ 2 single types created
@@ -494,6 +515,7 @@ Buka browser atau Postman, test endpoints:
 ## 🗓️ DAY 2 (Feb 2, 2026) - Strapi Finalization + Frontend Init
 
 ### ✅ Checklist Hari Ini:
+
 - [ ] Add more sample data
 - [ ] Configure media settings
 - [ ] Setup Astro project
@@ -507,6 +529,7 @@ Buka browser atau Postman, test endpoints:
 #### 1.1 Add More Services (Total 6)
 
 **Service 4:**
+
 ```
 Title:        Cloud Solutions
 Description:  Scalable cloud infrastructure and deployment
@@ -517,6 +540,7 @@ Featured:     ✅ true
 ```
 
 **Service 5:**
+
 ```
 Title:        AI & Machine Learning
 Description:  Intelligent solutions powered by AI
@@ -527,6 +551,7 @@ Featured:     ✅ true
 ```
 
 **Service 6:**
+
 ```
 Title:        Consulting
 Description:  Strategic technology consulting
@@ -541,6 +566,7 @@ Featured:     ✅ true
 #### 1.2 Add Team Members (4 samples)
 
 **Team 1:**
+
 ```
 Name:           Sarah Johnson
 Position:       CEO & Founder
@@ -551,6 +577,7 @@ Featured:       ✅ true
 ```
 
 **Team 2:**
+
 ```
 Name:           Michael Chen
 Position:       CTO
@@ -561,6 +588,7 @@ Featured:       ✅ true
 ```
 
 **Team 3:**
+
 ```
 Name:           Emily Rodriguez
 Position:       Lead Designer
@@ -571,6 +599,7 @@ Featured:       ✅ true
 ```
 
 **Team 4:**
+
 ```
 Name:           David Kim
 Position:       Senior Developer
@@ -600,6 +629,7 @@ Featured:       ✅ true
 #### 1.4 Add Blog Posts (3 samples)
 
 **Blog 1:**
+
 ```
 Title:          How to Build Modern Web Applications in 2026
 Excerpt:        Learn the latest trends and best practices for web development
@@ -610,6 +640,7 @@ Tags:           ["web", "react", "astro", "tutorial"]
 ```
 
 **Blog 2:**
+
 ```
 Title:          10 UI Design Trends to Watch This Year
 Excerpt:        Stay ahead with these cutting-edge design trends
@@ -620,6 +651,7 @@ Tags:           ["design", "ui", "trends", "2026"]
 ```
 
 **Blog 3:**
+
 ```
 Title:          Scaling Your Startup: Tech Infrastructure Guide
 Excerpt:        Essential infrastructure decisions for growing startups
@@ -688,44 +720,44 @@ Edit `tailwind.config.mjs`:
 ```javascript
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: 'class',
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#6366F1',
-          light: '#818CF8',
-          dark: '#4F46E5',
+          DEFAULT: "#6366F1",
+          light: "#818CF8",
+          dark: "#4F46E5",
         },
         secondary: {
-          DEFAULT: '#8B5CF6',
-          light: '#A78BFA',
-          dark: '#7C3AED',
+          DEFAULT: "#8B5CF6",
+          light: "#A78BFA",
+          dark: "#7C3AED",
         },
         accent: {
-          DEFAULT: '#06B6D4',
-          light: '#22D3EE',
-          dark: '#0891B2',
+          DEFAULT: "#06B6D4",
+          light: "#22D3EE",
+          dark: "#0891B2",
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-        mono: ['Space Grotesk', 'monospace'],
+        sans: ["Inter", "sans-serif"],
+        heading: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+        mono: ["Space Grotesk", "monospace"],
       },
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.5rem',
-        '4xl': '2rem',
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        "4xl": "2rem",
       },
       boxShadow: {
-        'glow': '0 0 40px rgba(99, 102, 241, 0.3)',
+        glow: "0 0 40px rgba(99, 102, 241, 0.3)",
       },
     },
   },
   plugins: [],
-}
+};
 ```
 
 ---
@@ -747,7 +779,7 @@ echo SITE_URL=http://localhost:4321 >> .env
 Create file: `src/lib/strapi.ts`
 
 ```typescript
-const STRAPI_URL = import.meta.env.STRAPI_URL || 'http://localhost:1337';
+const STRAPI_URL = import.meta.env.STRAPI_URL || "http://localhost:1337";
 
 interface StrapiResponse<T> {
   data: T;
@@ -763,10 +795,10 @@ interface StrapiResponse<T> {
 
 export async function fetchAPI<T>(
   endpoint: string,
-  params?: Record<string, string>
+  params?: Record<string, string>,
 ): Promise<StrapiResponse<T>> {
   const url = new URL(`/api${endpoint}`, STRAPI_URL);
-  
+
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
       url.searchParams.append(key, value);
@@ -774,7 +806,7 @@ export async function fetchAPI<T>(
   }
 
   const response = await fetch(url.toString());
-  
+
   if (!response.ok) {
     throw new Error(`Strapi API error: ${response.status}`);
   }
@@ -783,14 +815,14 @@ export async function fetchAPI<T>(
 }
 
 // Helper functions
-export const getServices = () => fetchAPI('/services?populate=*');
-export const getProjects = () => fetchAPI('/projects?populate=*');
-export const getTestimonials = () => fetchAPI('/testimonials?populate=*');
-export const getTeamMembers = () => fetchAPI('/team-members?populate=*');
-export const getBlogPosts = () => fetchAPI('/blog-posts?populate=*');
-export const getClientLogos = () => fetchAPI('/client-logos?populate=*');
-export const getHomepage = () => fetchAPI('/homepage?populate=*');
-export const getSiteSettings = () => fetchAPI('/site-setting?populate=*');
+export const getServices = () => fetchAPI("/services?populate=*");
+export const getProjects = () => fetchAPI("/projects?populate=*");
+export const getTestimonials = () => fetchAPI("/testimonials?populate=*");
+export const getTeamMembers = () => fetchAPI("/team-members?populate=*");
+export const getBlogPosts = () => fetchAPI("/blog-posts?populate=*");
+export const getClientLogos = () => fetchAPI("/client-logos?populate=*");
+export const getHomepage = () => fetchAPI("/homepage?populate=*");
+export const getSiteSettings = () => fetchAPI("/site-setting?populate=*");
 ```
 
 ---
@@ -811,6 +843,7 @@ Open: http://localhost:4321
 ### ✅ DAY 2 COMPLETED!
 
 **What we built:**
+
 - ✅ More sample data in Strapi
 - ✅ Strapi fully configured
 - ✅ Astro project initialized
@@ -825,6 +858,7 @@ Open: http://localhost:4321
 ## 🗓️ DAY 3 (Feb 3, 2026) - Design System & Base Components
 
 ### ✅ Checklist Hari Ini:
+
 - [ ] Setup global styles
 - [ ] Create design tokens
 - [ ] Build Button component
@@ -845,18 +879,23 @@ Create `src/styles/global.css`:
 @tailwind utilities;
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@400;700&display=swap");
 
 @layer base {
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-white text-slate-900 font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-bold;
   }
 
@@ -938,7 +977,7 @@ interface Props {
   image?: string;
 }
 
-const { 
+const {
   title = "TechCorp Solutions - Building Tomorrow's Technology",
   description = "Transform your ideas into reality with cutting-edge web solutions.",
   image = "/og-image.jpg"
@@ -953,36 +992,36 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
-    
+
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
     <!-- Fonts preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <slot />
-    
+
     <style is:global>
       @import '../styles/global.css';
     </style>
@@ -1005,7 +1044,7 @@ interface Props {
   class?: string;
 }
 
-const { 
+const {
   variant = 'primary',
   size = 'md',
   href,
@@ -1051,7 +1090,7 @@ interface Props {
   class?: string;
 }
 
-const { 
+const {
   variant = 'default',
   hover = true,
   class: className = ''
@@ -1108,7 +1147,7 @@ interface Props {
   class?: string;
 }
 
-const { 
+const {
   variant = 'primary',
   class: className = ''
 } = Astro.props;
@@ -1142,7 +1181,7 @@ interface Props {
   class?: string;
 }
 
-const { 
+const {
   subtitle,
   align = 'center',
   class: className = ''
@@ -1185,7 +1224,7 @@ import SectionTitle from '../components/common/SectionTitle.astro';
 
 <BaseLayout title="Component Test">
   <Container class="py-20 space-y-12">
-    
+
     <SectionTitle subtitle="Testing">
       Design System Components
     </SectionTitle>
@@ -1248,6 +1287,7 @@ import SectionTitle from '../components/common/SectionTitle.astro';
 ### ✅ DAY 3 COMPLETED!
 
 **What we built:**
+
 - ✅ Global styles configured
 - ✅ Base Layout created
 - ✅ Button component (4 variants)

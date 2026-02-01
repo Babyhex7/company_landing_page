@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * about-page router
@@ -7,6 +7,6 @@
  * PUT /api/about-page - update konten about page
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::about-page.about-page');
+module.exports = createCoreRouter("api::about-page.about-page");

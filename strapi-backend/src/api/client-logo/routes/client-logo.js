@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * client-logo router
@@ -6,6 +6,6 @@
  * GET /api/client-logos - ambil semua client logos
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::client-logo.client-logo');
+module.exports = createCoreRouter("api::client-logo.client-logo");

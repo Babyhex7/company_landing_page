@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * site-setting router
@@ -7,6 +7,6 @@
  * PUT /api/site-setting - update site settings
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::site-setting.site-setting');
+module.exports = createCoreRouter("api::site-setting.site-setting");

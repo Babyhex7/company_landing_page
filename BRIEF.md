@@ -24,15 +24,15 @@
 
 ## 🎯 Project Overview
 
-| Item | Detail |
-|------|--------|
-| **Project Name** | Modern Company Landing Page |
-| **Tech Stack** | Astro 4.x (Frontend) + Strapi 5.x (Headless CMS) |
-| **Styling** | Tailwind CSS 3.x |
-| **Animation** | Motion One / GSAP |
-| **Design Style** | Modern, Rounded, Glassmorphism, Motion-rich |
-| **Target Audience** | Professional company showcase dengan UX premium |
-| **Browser Support** | Chrome, Firefox, Safari, Edge (last 2 versions) |
+| Item                | Detail                                           |
+| ------------------- | ------------------------------------------------ |
+| **Project Name**    | Modern Company Landing Page                      |
+| **Tech Stack**      | Astro 4.x (Frontend) + Strapi 5.x (Headless CMS) |
+| **Styling**         | Tailwind CSS 3.x                                 |
+| **Animation**       | Motion One / GSAP                                |
+| **Design Style**    | Modern, Rounded, Glassmorphism, Motion-rich      |
+| **Target Audience** | Professional company showcase dengan UX premium  |
+| **Browser Support** | Chrome, Firefox, Safari, Edge (last 2 versions)  |
 
 ### Goals & Objectives
 
@@ -51,102 +51,111 @@
 
 ```css
 /* Primary Colors */
---color-primary:        #6366F1;  /* Indigo 500 */
---color-primary-light:  #818CF8;  /* Indigo 400 */
---color-primary-dark:   #4F46E5;  /* Indigo 600 */
+--color-primary: #6366f1; /* Indigo 500 */
+--color-primary-light: #818cf8; /* Indigo 400 */
+--color-primary-dark: #4f46e5; /* Indigo 600 */
 
 /* Secondary Colors */
---color-secondary:      #8B5CF6;  /* Purple 500 */
---color-secondary-light:#A78BFA;  /* Purple 400 */
---color-secondary-dark: #7C3AED;  /* Purple 600 */
+--color-secondary: #8b5cf6; /* Purple 500 */
+--color-secondary-light: #a78bfa; /* Purple 400 */
+--color-secondary-dark: #7c3aed; /* Purple 600 */
 
 /* Accent Colors */
---color-accent:         #06B6D4;  /* Cyan 500 */
---color-accent-light:   #22D3EE;  /* Cyan 400 */
---color-accent-dark:    #0891B2;  /* Cyan 600 */
+--color-accent: #06b6d4; /* Cyan 500 */
+--color-accent-light: #22d3ee; /* Cyan 400 */
+--color-accent-dark: #0891b2; /* Cyan 600 */
 
 /* Neutral Colors */
---color-dark:           #0F172A;  /* Slate 900 */
---color-dark-secondary: #1E293B;  /* Slate 800 */
---color-gray:           #64748B;  /* Slate 500 */
---color-light:          #F8FAFC;  /* Slate 50 */
---color-white:          #FFFFFF;
+--color-dark: #0f172a; /* Slate 900 */
+--color-dark-secondary: #1e293b; /* Slate 800 */
+--color-gray: #64748b; /* Slate 500 */
+--color-light: #f8fafc; /* Slate 50 */
+--color-white: #ffffff;
 
 /* Gradients */
---gradient-primary:     linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #06B6D4 100%);
---gradient-dark:        linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
---gradient-glass:       linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+--gradient-primary: linear-gradient(
+  135deg,
+  #6366f1 0%,
+  #8b5cf6 50%,
+  #06b6d4 100%
+);
+--gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+--gradient-glass: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.1) 0%,
+  rgba(255, 255, 255, 0.05) 100%
+);
 
 /* Semantic Colors */
---color-success:        #10B981;  /* Emerald 500 */
---color-warning:        #F59E0B;  /* Amber 500 */
---color-error:          #EF4444;  /* Red 500 */
---color-info:           #3B82F6;  /* Blue 500 */
+--color-success: #10b981; /* Emerald 500 */
+--color-warning: #f59e0b; /* Amber 500 */
+--color-error: #ef4444; /* Red 500 */
+--color-info: #3b82f6; /* Blue 500 */
 ```
 
 ### Typography
 
 ```css
 /* Font Families */
---font-heading:   'Plus Jakarta Sans', 'Inter', sans-serif;
---font-body:      'Inter', sans-serif;
---font-accent:    'Space Grotesk', monospace;  /* untuk angka/stats */
+--font-heading: "Plus Jakarta Sans", "Inter", sans-serif;
+--font-body: "Inter", sans-serif;
+--font-accent: "Space Grotesk", monospace; /* untuk angka/stats */
 
 /* Font Sizes (with line-height) */
---text-xs:    0.75rem / 1rem;      /* 12px */
---text-sm:    0.875rem / 1.25rem;  /* 14px */
---text-base:  1rem / 1.5rem;       /* 16px */
---text-lg:    1.125rem / 1.75rem;  /* 18px */
---text-xl:    1.25rem / 1.75rem;   /* 20px */
---text-2xl:   1.5rem / 2rem;       /* 24px */
---text-3xl:   1.875rem / 2.25rem;  /* 30px */
---text-4xl:   2.25rem / 2.5rem;    /* 36px */
---text-5xl:   3rem / 1.16;         /* 48px */
---text-6xl:   3.75rem / 1.1;       /* 60px */
---text-7xl:   4.5rem / 1.1;        /* 72px */
+--text-xs: 0.75rem / 1rem; /* 12px */
+--text-sm: 0.875rem / 1.25rem; /* 14px */
+--text-base: 1rem / 1.5rem; /* 16px */
+--text-lg: 1.125rem / 1.75rem; /* 18px */
+--text-xl: 1.25rem / 1.75rem; /* 20px */
+--text-2xl: 1.5rem / 2rem; /* 24px */
+--text-3xl: 1.875rem / 2.25rem; /* 30px */
+--text-4xl: 2.25rem / 2.5rem; /* 36px */
+--text-5xl: 3rem / 1.16; /* 48px */
+--text-6xl: 3.75rem / 1.1; /* 60px */
+--text-7xl: 4.5rem / 1.1; /* 72px */
 
 /* Font Weights */
---font-regular:    400;
---font-medium:     500;
---font-semibold:   600;
---font-bold:       700;
---font-extrabold:  800;
+--font-regular: 400;
+--font-medium: 500;
+--font-semibold: 600;
+--font-bold: 700;
+--font-extrabold: 800;
 ```
 
 ### Border Radius System
 
 ```css
---radius-xs:    4px;    /* small elements */
---radius-sm:    8px;    /* buttons small */
---radius-md:    12px;   /* cards small, inputs */
---radius-lg:    16px;   /* cards medium */
---radius-xl:    24px;   /* cards large */
---radius-2xl:   32px;   /* hero sections */
---radius-3xl:   48px;   /* special containers */
---radius-full:  9999px; /* pills, badges, avatars */
+--radius-xs: 4px; /* small elements */
+--radius-sm: 8px; /* buttons small */
+--radius-md: 12px; /* cards small, inputs */
+--radius-lg: 16px; /* cards medium */
+--radius-xl: 24px; /* cards large */
+--radius-2xl: 32px; /* hero sections */
+--radius-3xl: 48px; /* special containers */
+--radius-full: 9999px; /* pills, badges, avatars */
 ```
 
 ### Spacing Grid
 
 ```css
 /* Base unit: 4px */
---space-0:   0;
---space-1:   4px;
---space-2:   8px;
---space-3:   12px;
---space-4:   16px;
---space-5:   20px;
---space-6:   24px;
---space-8:   32px;
---space-10:  40px;
---space-12:  48px;
---space-16:  64px;
---space-20:  80px;
---space-24:  96px;
---space-32:  128px;
+--space-0: 0;
+--space-1: 4px;
+--space-2: 8px;
+--space-3: 12px;
+--space-4: 16px;
+--space-5: 20px;
+--space-6: 24px;
+--space-8: 32px;
+--space-10: 40px;
+--space-12: 48px;
+--space-16: 64px;
+--space-20: 80px;
+--space-24: 96px;
+--space-32: 128px;
 
 /* Container */
---container-max:  1280px;
+--container-max: 1280px;
 --container-padding: 24px;
 
 /* Grid */
@@ -157,12 +166,15 @@
 ### Shadow System
 
 ```css
---shadow-sm:    0 1px 2px 0 rgba(0, 0, 0, 0.05);
---shadow-md:    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
---shadow-lg:    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
---shadow-xl:    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
---shadow-2xl:   0 25px 50px -12px rgba(0, 0, 0, 0.25);
---shadow-glow:  0 0 40px rgba(99, 102, 241, 0.3);  /* primary glow */
+--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+--shadow-md:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+--shadow-lg:
+  0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+--shadow-xl:
+  0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+--shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+--shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3); /* primary glow */
 ```
 
 ### Glassmorphism Style
@@ -232,6 +244,7 @@
 ### Section Wireframes
 
 #### 1. Navigation Bar
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -252,6 +265,7 @@ Behavior:
 ```
 
 #### 2. Hero Section
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │  ○                                    ○                                    │
@@ -280,6 +294,7 @@ Elements:
 ```
 
 #### 3. Trusted By / Clients Logo
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -299,6 +314,7 @@ Style:
 ```
 
 #### 4. Services Section
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -338,6 +354,7 @@ Card Styles:
 ```
 
 #### 5. About / Feature Section (Bento Grid)
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -375,6 +392,7 @@ Layout:
 ```
 
 #### 6. Portfolio / Projects
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -415,6 +433,7 @@ Interactions:
 ```
 
 #### 7. Testimonials
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -451,6 +470,7 @@ Features:
 ```
 
 #### 8. Team Section
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -479,6 +499,7 @@ Interactions:
 ```
 
 #### 9. Blog / Insights Preview
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -512,6 +533,7 @@ Features:
 ```
 
 #### 10. CTA Section
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
@@ -539,6 +561,7 @@ Style:
 ```
 
 #### 11. Contact Section
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -579,6 +602,7 @@ Features:
 ```
 
 #### 12. Footer
+
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
@@ -653,11 +677,11 @@ Internal navigation: Smooth scroll (homepage sections)
 
 ### Animation Library Choice
 
-| Library | Use Case | Pros | Cons |
-|---------|----------|------|------|
-| **Motion One** ✅ | Simple animations | Lightweight (3KB), Astro-friendly | Limited complex sequences |
-| **GSAP** | Complex animations | Powerful, ScrollTrigger | Heavier (25KB+) |
-| **Framer Motion** | React islands only | Great API | Requires React |
+| Library           | Use Case           | Pros                              | Cons                      |
+| ----------------- | ------------------ | --------------------------------- | ------------------------- |
+| **Motion One** ✅ | Simple animations  | Lightweight (3KB), Astro-friendly | Limited complex sequences |
+| **GSAP**          | Complex animations | Powerful, ScrollTrigger           | Heavier (25KB+)           |
+| **Framer Motion** | React islands only | Great API                         | Requires React            |
 
 **Recommendation:** Start with Motion One, add GSAP if needed for complex ScrollTrigger effects.
 
@@ -666,47 +690,47 @@ Internal navigation: Smooth scroll (homepage sections)
 ```javascript
 /* Timing Guidelines */
 const timing = {
-  instant: 100,      // Micro-interactions
-  fast: 200,         // UI feedback
-  normal: 300,       // Standard transitions
-  slow: 500,         // Entrance animations
-  slower: 800,       // Complex reveals
-  slowest: 1000      // Page transitions
+  instant: 100, // Micro-interactions
+  fast: 200, // UI feedback
+  normal: 300, // Standard transitions
+  slow: 500, // Entrance animations
+  slower: 800, // Complex reveals
+  slowest: 1000, // Page transitions
 };
 
 /* Easing Functions */
 const easing = {
-  default: 'cubic-bezier(0.4, 0, 0.2, 1)',      // Smooth
-  easeIn: 'cubic-bezier(0.4, 0, 1, 1)',         // Accelerate
-  easeOut: 'cubic-bezier(0, 0, 0.2, 1)',        // Decelerate
-  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',    // Smooth both
-  bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)', // Playful
-  spring: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)' // Natural
+  default: "cubic-bezier(0.4, 0, 0.2, 1)", // Smooth
+  easeIn: "cubic-bezier(0.4, 0, 1, 1)", // Accelerate
+  easeOut: "cubic-bezier(0, 0, 0.2, 1)", // Decelerate
+  easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)", // Smooth both
+  bounce: "cubic-bezier(0.68, -0.55, 0.265, 1.55)", // Playful
+  spring: "cubic-bezier(0.175, 0.885, 0.32, 1.275)", // Natural
 };
 
 /* Stagger Delay */
 const stagger = {
-  fast: 50,    // Quick sequence
+  fast: 50, // Quick sequence
   normal: 100, // Standard stagger
-  slow: 150    // Dramatic reveal
+  slow: 150, // Dramatic reveal
 };
 ```
 
 ### Key Animations Reference
 
-| Element | Animation | Duration | Easing | Trigger |
-|---------|-----------|----------|--------|---------|
-| **Hero Text** | Fade up + stagger | 600ms | easeOut | On load |
-| **Hero Image** | Float loop | 3000ms | easeInOut | Infinite |
-| **Gradient Orbs** | Rotate + scale | 20000ms | linear | Infinite |
-| **Nav (scroll)** | Shrink + blur BG | 300ms | easeOut | Scroll > 50px |
-| **Cards** | Fade up | 500ms | easeOut | In viewport |
-| **Stats Counter** | Count up | 2000ms | easeOut | In viewport |
-| **Portfolio Filter** | FLIP layout | 400ms | easeInOut | On filter |
-| **Testimonial** | Slide | 500ms | easeInOut | Navigation |
-| **Buttons (hover)** | Scale 1.05 | 200ms | easeOut | Hover |
-| **Cards (hover)** | Lift + shadow | 300ms | easeOut | Hover |
-| **Page Transition** | Fade/Slide | 400ms | easeInOut | Route change |
+| Element              | Animation         | Duration | Easing    | Trigger       |
+| -------------------- | ----------------- | -------- | --------- | ------------- |
+| **Hero Text**        | Fade up + stagger | 600ms    | easeOut   | On load       |
+| **Hero Image**       | Float loop        | 3000ms   | easeInOut | Infinite      |
+| **Gradient Orbs**    | Rotate + scale    | 20000ms  | linear    | Infinite      |
+| **Nav (scroll)**     | Shrink + blur BG  | 300ms    | easeOut   | Scroll > 50px |
+| **Cards**            | Fade up           | 500ms    | easeOut   | In viewport   |
+| **Stats Counter**    | Count up          | 2000ms   | easeOut   | In viewport   |
+| **Portfolio Filter** | FLIP layout       | 400ms    | easeInOut | On filter     |
+| **Testimonial**      | Slide             | 500ms    | easeInOut | Navigation    |
+| **Buttons (hover)**  | Scale 1.05        | 200ms    | easeOut   | Hover         |
+| **Cards (hover)**    | Lift + shadow     | 300ms    | easeOut   | Hover         |
+| **Page Transition**  | Fade/Slide        | 400ms    | easeInOut | Route change  |
 
 ### Scroll Animation Setup
 
@@ -872,6 +896,7 @@ company_landing_page/
 ### Collection Types
 
 #### 1. Service
+
 ```javascript
 {
   "title": "string",           // "Web Development"
@@ -887,6 +912,7 @@ company_landing_page/
 ```
 
 #### 2. Project (Portfolio)
+
 ```javascript
 {
   "title": "string",           // "E-commerce Platform"
@@ -905,6 +931,7 @@ company_landing_page/
 ```
 
 #### 3. Testimonial
+
 ```javascript
 {
   "quote": "text",             // Testimonial text
@@ -918,6 +945,7 @@ company_landing_page/
 ```
 
 #### 4. TeamMember
+
 ```javascript
 {
   "name": "string",            // "Jane Smith"
@@ -931,6 +959,7 @@ company_landing_page/
 ```
 
 #### 5. BlogPost
+
 ```javascript
 {
   "title": "string",           // "How to Build..."
@@ -948,6 +977,7 @@ company_landing_page/
 ```
 
 #### 6. ClientLogo
+
 ```javascript
 {
   "name": "string",            // "Google"
@@ -958,6 +988,7 @@ company_landing_page/
 ```
 
 #### 7. Category
+
 ```javascript
 {
   "name": "string",            // "Web Development"
@@ -969,6 +1000,7 @@ company_landing_page/
 ### Single Types
 
 #### Homepage
+
 ```javascript
 {
   "hero_title": "string",      // Main headline
@@ -986,6 +1018,7 @@ company_landing_page/
 ```
 
 #### SiteSetting
+
 ```javascript
 {
   "site_name": "string",       // "Company Name"
@@ -1025,7 +1058,7 @@ GET    /api/site-setting          # Site settings (single)
 ### Strapi API Helper (astro-frontend/src/lib/strapi.ts)
 
 ```typescript
-const STRAPI_URL = import.meta.env.STRAPI_URL || 'http://localhost:1337';
+const STRAPI_URL = import.meta.env.STRAPI_URL || "http://localhost:1337";
 
 interface StrapiResponse<T> {
   data: T;
@@ -1041,10 +1074,10 @@ interface StrapiResponse<T> {
 
 export async function fetchAPI<T>(
   endpoint: string,
-  params?: Record<string, string>
+  params?: Record<string, string>,
 ): Promise<StrapiResponse<T>> {
   const url = new URL(`/api${endpoint}`, STRAPI_URL);
-  
+
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
       url.searchParams.append(key, value);
@@ -1052,7 +1085,7 @@ export async function fetchAPI<T>(
   }
 
   const response = await fetch(url.toString());
-  
+
   if (!response.ok) {
     throw new Error(`Strapi API error: ${response.status}`);
   }
@@ -1061,13 +1094,13 @@ export async function fetchAPI<T>(
 }
 
 // Helper functions
-export const getServices = () => fetchAPI('/services?populate=*');
-export const getProjects = () => fetchAPI('/projects?populate=*');
-export const getTestimonials = () => fetchAPI('/testimonials?populate=*');
-export const getTeamMembers = () => fetchAPI('/team-members?populate=*');
-export const getBlogPosts = () => fetchAPI('/blog-posts?populate=*');
-export const getHomepage = () => fetchAPI('/homepage?populate=*');
-export const getSiteSettings = () => fetchAPI('/site-setting?populate=*');
+export const getServices = () => fetchAPI("/services?populate=*");
+export const getProjects = () => fetchAPI("/projects?populate=*");
+export const getTestimonials = () => fetchAPI("/testimonials?populate=*");
+export const getTeamMembers = () => fetchAPI("/team-members?populate=*");
+export const getBlogPosts = () => fetchAPI("/blog-posts?populate=*");
+export const getHomepage = () => fetchAPI("/homepage?populate=*");
+export const getSiteSettings = () => fetchAPI("/site-setting?populate=*");
 ```
 
 ---
@@ -1076,17 +1109,17 @@ export const getSiteSettings = () => fetchAPI('/site-setting?populate=*');
 
 ### Performance Targets
 
-| Metric | Target | Tool |
-|--------|--------|------|
-| Lighthouse Performance | > 90 | Chrome DevTools |
-| Lighthouse Accessibility | > 90 | Chrome DevTools |
-| Lighthouse Best Practices | > 90 | Chrome DevTools |
-| Lighthouse SEO | > 90 | Chrome DevTools |
-| First Contentful Paint | < 1.5s | WebPageTest |
-| Largest Contentful Paint | < 2.5s | WebPageTest |
-| Time to Interactive | < 3s | WebPageTest |
-| Cumulative Layout Shift | < 0.1 | Chrome DevTools |
-| Total Blocking Time | < 200ms | Chrome DevTools |
+| Metric                    | Target  | Tool            |
+| ------------------------- | ------- | --------------- |
+| Lighthouse Performance    | > 90    | Chrome DevTools |
+| Lighthouse Accessibility  | > 90    | Chrome DevTools |
+| Lighthouse Best Practices | > 90    | Chrome DevTools |
+| Lighthouse SEO            | > 90    | Chrome DevTools |
+| First Contentful Paint    | < 1.5s  | WebPageTest     |
+| Largest Contentful Paint  | < 2.5s  | WebPageTest     |
+| Time to Interactive       | < 3s    | WebPageTest     |
+| Cumulative Layout Shift   | < 0.1   | Chrome DevTools |
+| Total Blocking Time       | < 200ms | Chrome DevTools |
 
 ### Image Optimization
 
@@ -1132,26 +1165,26 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href={canonicalURL} />
-  
+
   <!-- Primary Meta Tags -->
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content={type} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={image} />
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content={canonicalURL} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image} />
-  
+
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
     {JSON.stringify({
@@ -1177,15 +1210,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 export default {
   theme: {
     screens: {
-      'xs': '475px',
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      xs: "475px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
-}
+};
 ```
 
 ### Accessibility Checklist
@@ -1222,6 +1255,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ```
 
 **Deliverables:**
+
 - [ ] Astro project initialized
 - [ ] Tailwind CSS configured
 - [ ] Strapi backend running
@@ -1231,6 +1265,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ### Phase 2: Design System (Day 2)
 
 **Tasks:**
+
 - [ ] Implement color tokens in Tailwind config
 - [ ] Set up typography scale
 - [ ] Create base component styles
@@ -1244,6 +1279,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ### Phase 3: Layout Components (Day 3)
 
 **Tasks:**
+
 - [ ] Create BaseLayout.astro
 - [ ] Build Header/Navigation:
   - [ ] Desktop navigation
@@ -1254,16 +1290,17 @@ npx create-strapi-app@latest strapi-backend --quickstart
 
 ### Phase 4: Homepage Sections (Days 4-7)
 
-| Day | Sections |
-|-----|----------|
-| Day 4 | Hero, Clients marquee |
-| Day 5 | Services, About (Bento) |
-| Day 6 | Portfolio, Testimonials |
+| Day   | Sections                 |
+| ----- | ------------------------ |
+| Day 4 | Hero, Clients marquee    |
+| Day 5 | Services, About (Bento)  |
+| Day 6 | Portfolio, Testimonials  |
 | Day 7 | Team, Blog, CTA, Contact |
 
 ### Phase 5: Strapi Setup (Day 8)
 
 **Tasks:**
+
 - [ ] Create all content types
 - [ ] Set up relationships
 - [ ] Configure media library
@@ -1273,6 +1310,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ### Phase 6: Integration (Day 9)
 
 **Tasks:**
+
 - [ ] Connect Astro to Strapi API
 - [ ] Implement dynamic data fetching
 - [ ] Build dynamic pages ([slug].astro)
@@ -1282,6 +1320,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ### Phase 7: Animations (Days 10-11)
 
 **Tasks:**
+
 - [ ] Scroll-triggered animations
 - [ ] Page transitions
 - [ ] Hover interactions
@@ -1292,6 +1331,7 @@ npx create-strapi-app@latest strapi-backend --quickstart
 ### Phase 8: Polish & Testing (Days 12-14)
 
 **Tasks:**
+
 - [ ] Responsive testing (all breakpoints)
 - [ ] Cross-browser testing
 - [ ] Performance optimization
@@ -1307,19 +1347,19 @@ npx create-strapi-app@latest strapi-backend --quickstart
 
 ### Frontend (Astro) Options
 
-| Platform | Pros | Setup |
-|----------|------|-------|
-| **Vercel** ✅ | Easy, free tier, great DX | `vercel deploy` |
-| **Netlify** | Easy, good features | `netlify deploy` |
+| Platform             | Pros                      | Setup            |
+| -------------------- | ------------------------- | ---------------- |
+| **Vercel** ✅        | Easy, free tier, great DX | `vercel deploy`  |
+| **Netlify**          | Easy, good features       | `netlify deploy` |
 | **Cloudflare Pages** | Fast, unlimited bandwidth | Dashboard deploy |
 
 ### Backend (Strapi) Options
 
-| Platform | Pros | Setup |
-|----------|------|-------|
-| **Railway** ✅ | Easy, PostgreSQL included | Git deploy |
-| **Render** | Free tier, simple | Git deploy |
-| **DigitalOcean** | Reliable, scalable | App Platform |
+| Platform         | Pros                      | Setup        |
+| ---------------- | ------------------------- | ------------ |
+| **Railway** ✅   | Easy, PostgreSQL included | Git deploy   |
+| **Render**       | Free tier, simple         | Git deploy   |
+| **DigitalOcean** | Reliable, scalable        | App Platform |
 
 ### Recommended Stack
 
@@ -1380,6 +1420,7 @@ jobs:
 ## ✅ Checklist & Deliverables
 
 ### Design & UI
+
 - [ ] Responsive design (mobile-first)
 - [ ] Dark/Light mode toggle
 - [ ] Consistent design system
@@ -1387,6 +1428,7 @@ jobs:
 - [ ] Interactive states (hover, focus, active)
 
 ### Functionality
+
 - [ ] Navigation working (desktop + mobile)
 - [ ] Smooth scroll to sections
 - [ ] Contact form with validation
@@ -1395,6 +1437,7 @@ jobs:
 - [ ] Blog pagination
 
 ### Animation & Motion
+
 - [ ] Scroll-triggered animations
 - [ ] Page transitions
 - [ ] Micro-interactions
@@ -1402,6 +1445,7 @@ jobs:
 - [ ] Reduced motion support
 
 ### Performance
+
 - [ ] Lighthouse score 90+
 - [ ] Images optimized (WebP, lazy loading)
 - [ ] Fonts optimized (subset, preload)
@@ -1409,6 +1453,7 @@ jobs:
 - [ ] Caching configured
 
 ### SEO
+
 - [ ] Meta tags dynamic
 - [ ] Open Graph images
 - [ ] Structured data (JSON-LD)
@@ -1417,6 +1462,7 @@ jobs:
 - [ ] Canonical URLs
 
 ### Accessibility
+
 - [ ] WCAG 2.1 AA compliant
 - [ ] Keyboard navigation
 - [ ] Screen reader tested
@@ -1424,6 +1470,7 @@ jobs:
 - [ ] Focus states visible
 
 ### Quality Assurance
+
 - [ ] Cross-browser tested (Chrome, Firefox, Safari, Edge)
 - [ ] Mobile tested (iOS, Android)
 - [ ] Form error handling
@@ -1432,6 +1479,7 @@ jobs:
 - [ ] Console error-free
 
 ### Documentation
+
 - [ ] README with setup instructions
 - [ ] Environment variables documented
 - [ ] Strapi content guide
@@ -1464,4 +1512,3 @@ jobs:
 > **Document Status:** ✅ Complete - Ready for Development
 >
 > **Next Step:** Konfirmasi brief ini, lalu mulai Phase 1: Project Setup
-

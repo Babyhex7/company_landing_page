@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 /**
  * project controller
  * Menghandle semua request API untuk portfolio projects
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::project.project');
+module.exports = createCoreController("api::project.project");

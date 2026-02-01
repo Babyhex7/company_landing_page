@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 /**
  * category controller
  * Menghandle semua request API untuk categories
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::category.category');
+module.exports = createCoreController("api::category.category");

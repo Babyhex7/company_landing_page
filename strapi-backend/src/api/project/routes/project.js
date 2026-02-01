@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * project router
@@ -7,6 +7,6 @@
  * GET /api/projects/:id - ambil satu project
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::project.project');
+module.exports = createCoreRouter("api::project.project");

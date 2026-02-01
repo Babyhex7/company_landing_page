@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * homepage router
@@ -7,6 +7,6 @@
  * PUT /api/homepage - update konten homepage
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::homepage.homepage');
+module.exports = createCoreRouter("api::homepage.homepage");
