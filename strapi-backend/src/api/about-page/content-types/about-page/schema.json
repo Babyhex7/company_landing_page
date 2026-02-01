@@ -1,0 +1,78 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page",
+    "description": "Konten halaman about us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "About Us"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "story_title": {
+      "type": "string",
+      "default": "Our Story"
+    },
+    "story_content": {
+      "type": "richtext"
+    },
+    "story_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "mission_title": {
+      "type": "string",
+      "default": "Our Mission"
+    },
+    "mission_content": {
+      "type": "text"
+    },
+    "vision_title": {
+      "type": "string",
+      "default": "Our Vision"
+    },
+    "vision_content": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "json"
+    },
+    "values": {
+      "type": "json"
+    },
+    "team_title": {
+      "type": "string",
+      "default": "Meet Our Team"
+    },
+    "team_subtitle": {
+      "type": "text"
+    },
+    "seo_title": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "seo_description": {
+      "type": "text",
+      "maxLength": 160
+    }
+  }
+}

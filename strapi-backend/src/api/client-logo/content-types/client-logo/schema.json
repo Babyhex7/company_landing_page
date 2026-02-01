@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client_logos",
+  "info": {
+    "singularName": "client-logo",
+    "pluralName": "client-logos",
+    "displayName": "Client Logo",
+    "description": "Logo klien untuk section trusted by"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "website": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

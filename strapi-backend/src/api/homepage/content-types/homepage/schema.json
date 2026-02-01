@@ -1,0 +1,108 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "Konten halaman utama website"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "hero_subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "hero_cta_text": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "hero_cta_link": {
+      "type": "string",
+      "default": "/contact"
+    },
+    "hero_cta_secondary_text": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "hero_cta_secondary_link": {
+      "type": "string",
+      "default": "/about"
+    },
+    "stats": {
+      "type": "json"
+    },
+    "services_title": {
+      "type": "string",
+      "default": "What We Do"
+    },
+    "services_subtitle": {
+      "type": "text"
+    },
+    "portfolio_title": {
+      "type": "string",
+      "default": "Our Works"
+    },
+    "portfolio_subtitle": {
+      "type": "text"
+    },
+    "testimonials_title": {
+      "type": "string",
+      "default": "What Clients Say"
+    },
+    "testimonials_subtitle": {
+      "type": "text"
+    },
+    "team_title": {
+      "type": "string",
+      "default": "Meet Our Team"
+    },
+    "team_subtitle": {
+      "type": "text"
+    },
+    "blog_title": {
+      "type": "string",
+      "default": "Latest Insights"
+    },
+    "blog_subtitle": {
+      "type": "text"
+    },
+    "cta_title": {
+      "type": "string",
+      "default": "Ready to Start Your Project?"
+    },
+    "cta_subtitle": {
+      "type": "text"
+    },
+    "cta_button_text": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "cta_button_link": {
+      "type": "string",
+      "default": "/contact"
+    },
+    "seo_title": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "seo_description": {
+      "type": "text",
+      "maxLength": 160
+    }
+  }
+}

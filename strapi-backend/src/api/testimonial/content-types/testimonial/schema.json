@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonial",
+    "description": "Testimoni dari klien"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "author_name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "author_position": {
+      "type": "string",
+      "required": true
+    },
+    "author_company": {
+      "type": "string",
+      "required": true
+    },
+    "author_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "rating": {
+      "type": "integer",
+      "min": 1,
+      "max": 5,
+      "default": 5
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

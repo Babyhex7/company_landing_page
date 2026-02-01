@@ -1,0 +1,98 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Pengaturan global website"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "site_name": {
+      "type": "string",
+      "required": true,
+      "default": "Company Name"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "logo_dark": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "contact_email": {
+      "type": "email"
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "contact_address": {
+      "type": "text"
+    },
+    "contact_map_url": {
+      "type": "string"
+    },
+    "working_hours": {
+      "type": "string"
+    },
+    "social_facebook": {
+      "type": "string"
+    },
+    "social_twitter": {
+      "type": "string"
+    },
+    "social_instagram": {
+      "type": "string"
+    },
+    "social_linkedin": {
+      "type": "string"
+    },
+    "social_youtube": {
+      "type": "string"
+    },
+    "social_github": {
+      "type": "string"
+    },
+    "footer_text": {
+      "type": "text"
+    },
+    "copyright_text": {
+      "type": "string"
+    },
+    "google_analytics_id": {
+      "type": "string"
+    },
+    "default_seo_title": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "default_seo_description": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "default_seo_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
