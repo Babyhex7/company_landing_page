@@ -1,0 +1,68 @@
+---
+// Client Logos / Trusted By Section
+import { getClientLogos, getStrapiMediaUrl } from '../../lib/strapi';
+
+const clientLogos = await getClientLogos();
+
+// Default clients if Strapi is not available
+const defaultClients = [
+  { name: 'TechCorp' },
+  { name: 'InnovateLab' },
+  { name: 'DataFlow' },
+  { name: 'CloudNine' },
+  { name: 'DigitalEdge' },
+  { name: 'NextGen' },
+  { name: 'FutureTech' },
+  { name: 'SmartSolutions' }
+];
+
+const displayClients = clientLogos?.length ? clientLogos : defaultClients;
+---
+
+<section class="py-16 border-y border-slate-800/50">
+  <div class="container mx-auto px-6">
+    <p class="text-center text-slate-500 text-sm uppercase tracking-wider mb-10">
+      Trusted by innovative companies worldwide
+    </p>
+    
+    <!-- Logo Carousel -->
+    <div class="relative overflow-hidden">
+      <div class="flex items-center gap-16 animate-scroll">
+        {[...displayClients, ...displayClients].map((client: any) => (
+          <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity duration-300">
+            {client.logo?.url ? (
+              <img 
+                src={getStrapiMediaUrl(client.logo.url)}
+                alt={client.name}
+                class="h-10 w-auto grayscale hover:grayscale-0 transition-all"
+              />
+            ) : (
+              <div class="px-8 py-3 rounded-xl bg-slate-800/30 border border-slate-700/50 text-slate-400 font-semibold text-lg">
+                {client.name}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>

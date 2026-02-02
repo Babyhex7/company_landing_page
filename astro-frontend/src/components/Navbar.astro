@@ -1,0 +1,103 @@
+---
+// Modern Glassmorphism Navbar
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50">
+  <nav class="glass mx-4 mt-4 rounded-2xl px-6 py-4 lg:mx-8">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 flex items-center justify-center">
+          <span class="text-white font-bold text-lg">N</span>
+        </div>
+        <span class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+          NexaTech
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href}
+            class="text-slate-300 hover:text-white font-medium transition-colors relative group"
+          >
+            {link.name}
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all group-hover:w-full"></span>
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:block">
+        <a href="/contact" class="btn btn-primary text-sm px-6 py-3">
+          Get Started
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 text-white hover:text-indigo-400 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden mt-4 pt-4 border-t border-white/10">
+      <div class="flex flex-col gap-4">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href}
+            class="text-slate-300 hover:text-white font-medium transition-colors py-2"
+          >
+            {link.name}
+          </a>
+        ))}
+        <a href="/contact" class="btn btn-primary text-sm mt-2 w-full justify-center">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  let isOpen = false;
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu?.classList.toggle('hidden');
+    
+    if (isOpen) {
+      menuIcon?.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+    } else {
+      menuIcon?.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    }
+  });
+</script>
+
+<style>
+  header {
+    transition: all 0.3s ease;
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+// CTA (Call to Action) Section Component
+---
+
+<section class="section relative">
+  <div class="container mx-auto px-6">
+    <div class="animate-fade-up relative rounded-3xl overflow-hidden">
+      <!-- Background Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700"></div>
+      
+      <!-- Pattern Overlay -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <!-- Decorative Shapes -->
+      <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 py-20 px-8 md:px-16 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+          Ready to Start Your <br class="hidden md:block" />
+          Next Project?
+        </h2>
+        <p class="text-xl text-indigo-100 max-w-2xl mx-auto mb-10">
+          Let's collaborate to bring your vision to life. Get in touch today and let's create something amazing together.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="/contact" 
+            class="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 font-semibold rounded-full hover:bg-indigo-50 transition-colors shadow-xl"
+          >
+            Start a Project
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a 
+            href="mailto:hello@nexatech.com"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-colors"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            hello@nexatech.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

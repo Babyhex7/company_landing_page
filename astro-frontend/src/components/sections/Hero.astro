@@ -1,0 +1,83 @@
+---
+// Hero Section Component
+interface Props {
+  title?: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const { 
+  title = "We Build Digital\nExperiences That Matter",
+  subtitle = "Transform your vision into reality with cutting-edge web solutions. We craft beautiful, performant, and scalable applications.",
+  ctaText = "Start Your Project",
+  ctaLink = "/contact"
+} = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Badge -->
+      <div class="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        Welcome to the Future
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="animate-fade-up delay-100 text-display font-bold text-white leading-tight mb-6">
+        <span class="block">We Build <span class="gradient-text">Digital</span></span>
+        <span class="block">Experiences That <span class="gradient-text">Matter</span></span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="animate-fade-up delay-200 text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        {subtitle}
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={ctaLink} class="btn btn-primary text-lg px-8 py-4">
+          {ctaText}
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        <a href="/projects" class="btn btn-secondary text-lg px-8 py-4">
+          View Our Work
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="animate-fade-up delay-400 grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-slate-800">
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">150+</div>
+          <div class="text-slate-500 text-sm">Projects Delivered</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">50+</div>
+          <div class="text-slate-500 text-sm">Happy Clients</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">5+</div>
+          <div class="text-slate-500 text-sm">Years Experience</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">99%</div>
+          <div class="text-slate-500 text-sm">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
