@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CTA from '../components/sections/CTA.astro';
-import { getServices, getStrapiMediaUrl } from '../lib/strapi';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+import { getServices, getStrapiMediaUrl } from '../../lib/strapi';
 
 const services = await getServices();
 
@@ -72,8 +72,7 @@ const icons: Record<string, string> = {
   <section class="pt-40 pb-20">
     <div class="container mx-auto px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <span class="animate-fade-up inline-block text-indigo-400 font-semibold mb-4">Our Services</span>
-        <h1 class="animate-fade-up delay-100 text-display font-bold text-white mb-6">
+        <h1 class="animate-fade-up text-display font-bold text-white mb-6">
           Comprehensive <span class="gradient-text">Digital Solutions</span>
         </h1>
         <p class="animate-fade-up delay-200 text-xl text-slate-400 leading-relaxed">
@@ -137,8 +136,7 @@ const icons: Record<string, string> = {
   <section class="section">
     <div class="container mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="animate-fade-up inline-block text-indigo-400 font-semibold mb-4">Our Process</span>
-        <h2 class="animate-fade-up delay-100 text-heading font-bold text-white mb-6">
+        <h2 class="animate-fade-up text-heading font-bold text-white mb-6">
           How We <span class="gradient-text">Work</span>
         </h2>
         <p class="animate-fade-up delay-200 text-lg text-slate-400">
